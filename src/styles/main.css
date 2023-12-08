@@ -1,153 +1,29 @@
 /* Estilos Globais */
 
 @import 'reset.css';
+@import 'buttons.css';
+@import 'containers_and_frames.css';
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    user-select: none;
+    font-family: 'Press Start 2P', cursive;
+}
 
 /* Estilos do Corpo */
 
 body {
-    font-family: 'Press Start 2P', cursive;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #e3f2fb;
-    color: #fff;
+    
+    
+
 }
 
 /* Estilos do Contêiner Principal */
 
 .container {
-    width: 780px;
-    border: 1px solid blue;
-    border-radius: 20px;
-    padding: 35px 40px;
-    background-color: #000;
+
 
 }
 
-.container header{
-    color: #b2b2b2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header h2{
-    font-size: 1.6rem;
-}
-
-header .column{
-    display: flex;
-    align-items: center;
-}
-
-header .column span{
-    font-weight: 500;
-    margin-right: 15px;
-    font-size: 1.19rem;
-}
-
-.volumn input{
-    accent-color: #694949;
-}
-
-.check-keys input{
-    accent-color: #694949;
-    width: 60px;
-    height: 30px;
-    appearance: none;
-    border-radius: 30px;
-    background-color: #38363f;
-    cursor: pointer;
-    border: 1px solid #fff;
-    position: relative;
-    margin: 0 auto;
-}
-
-.check-keys input::before{
-    content: "";
-    width: 20px;
-    height: 20px;
-    border-radius: inherit;
-    background-color: #6b6b64;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 0.3rem;
-    transform: translateY(-50%);
-    transition: all 0.15s ease;
-}
-
-.check-keys input:checked::before{
-    background-color: #fff;
-    left: 2.3rem;
-}
-
-.piano-keys{
-    display: flex;
-    margin-top: 40px;
-}
-
-.piano-keys .key{
-    cursor: pointer;
-    list-style: none;
-    color: #6b6b64;
-    user-select: none;
-    position: relative;
-    text-transform: uppercase;
-}
-
-.piano-keys .white{
-    width: 70px;
-    height: 230px;
-    border: 1px solid red;
-    background: linear-gradient(#fff 96%, #eee 4%);
-    border-radius: 8px;
-    
-}
-
-.piano-keys .white.active{
-    box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
-    background: linear-gradient(to bottom #fff 0%, #eee 100%);
-}
-    
-
-.piano-keys .black{
-    width: 44px;
-    height: 140px;
-    border: 1px solid red;
-    background: linear-gradient(#131212, rgb(79, 83, 79));
-    border-radius: 0 0 5px 5px;
-    z-index: 2;
-    margin: 0 -22px 0 -22px;
-    
-}
-
-.piano-keys .black.active{
-    box-shadow: inset -5px 5px 20px rgba(255,255,255,0.2);
-    background: linear-gradient(to bottom #000, #434343);
-}
-
-.piano-keys span{
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    font-size: 1.13rem; 
-}
-
-.piano-keys .key.hide span{
-    display: none;
-}
-
-.check-keys span{
-    display: flex;
-    justify-content: center;
-}
-
-.check-keys{
-    text-align: center;
-}
 
 
