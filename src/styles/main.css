@@ -14,9 +14,15 @@
 /* Estilos do Corpo */
 
 body {
-    
-    
+    cursor: url("../assets/cursor/yugicursor.png"), default;
+}
 
+button,
+a,
+img:hover,
+button:hover,
+a:hover{
+    cursor: url("../assets/cursor/yamiyugicursorGLOW.png"), auto;
 }
 
 /* Estilos do Contêiner Principal */
@@ -63,6 +69,7 @@ body {
 .container_left{
     width: 35%;
     min-width: 250px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -114,6 +121,12 @@ body {
     padding: 0.3rem;
 }
 
+.container_cards{
+    display: flex;
+    justify-content: space-between;
+    height: 10rem;
+}
+
 /* Estilo da parte central do lado direito */
 
 .card_versus{
@@ -153,6 +166,17 @@ body {
     width: 8rem;
     border-radius: 8px;
 }
+
+/* Estilos das classes criadas */
+.card{
+    transition: transform 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.5);
+}
+
+
 
 
 
