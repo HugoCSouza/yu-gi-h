@@ -123,6 +123,7 @@ async function setCardsField(cardId) {
 
 };
 
+// Função que remove todas as cartas do campo
 async function removeAllCardsImages(){
     let {playerb, computerb} = state.playerSides;
     let imgElements = playerb.querySelectorAll("img")
@@ -132,6 +133,7 @@ async function removeAllCardsImages(){
     imgElements.forEach((img) => img.remove())
 };
 
+// Função para verificar quem ganhou ou perdeu
 async function checkDuelResults(cardPlayerId, cardComputerId){
     let duelResults = "Empate!";
     let cardPlayer = cardData[cardPlayerId];
@@ -147,15 +149,18 @@ async function checkDuelResults(cardPlayerId, cardComputerId){
     return duelResults
 };
 
+// Função para aparecer o botão de reset com a mensagem de vitória empate ou derrota
 async function drawButton(text){
     state.actions.button.innerText = text;
     state.actions.button.style.display = "block";
 }
 
+// Função para atualizar os texto de contagem de vitórias e derrotas
 async function updateScore(){
     state.score.scoreBox.innerText = `Vitórias: ${state.score.playerScore} | Derrotas: ${state.score.computerScore}`;
 }
 
+// Função para resetar a pagina ao estado inicial de duelo
 async function resetDuel(){
     state.cardSprites.avatar.src = "";
     state.cardSprites.name.innerText = "";
@@ -167,7 +172,7 @@ async function resetDuel(){
     
     init()
 }
-
+// Função para tocar os aúdios de vitória
 async function playAudio(status){
     const aud = new Audio(`./src/assets/audios/${status}.wav`)
     aud.play()
